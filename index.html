@@ -1,43 +1,129 @@
-<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>replit</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-  </head>
-  <style>
-    .container{
-      display: flex;
-      justify-content: center;
-      height: 100v;
-      align-items: center;
-      flex-direction: column;
+    <head></head>
+    <title> Find your receipe </title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+         ul{
+            font-size: 25px;
+            list-style-type: none;
+            overflow: hidden;
+            background-color: rgb(239, 140, 252);
+        }
+        li{
+            display: block;
+            color: rgb(15, 15, 15);
+            float: right;
+            text-align: center;
+            padding: 14px 16px;
+            margin: 10px;
+            text-decoration: none;
+        }
+        a:hover{
+            color:rgb(17, 0, 255);
+        }
+         .title{
+            font-size: 50px;
+            text-align: center;
+            color: rgb(226, 4, 171);
+            padding-bottom: 5px ;
+            margin-bottom: 2px ;
+            text-decoration: underline solid rgb(153, 18, 18);
+        }
+        .subtitle {
+            font-size: 18px;
+            text-align: center;
+            color: rgb(8, 42, 65);
+            padding-top: 5px ;
+            margin-top: 2px ;
+        }
+        .subtitle1 {
+            font-size: 20px;
+            text-align: left;
+            color: rgb(0, 8, 0);
+            padding-top: 5px ;
+            margin-top: 10px ;
+
+        }
+        .f{
+            padding: 5px ;
+        }
+        .head2{
+            font-size: 25px;
+            text-align: center;
+            color: rgb(226, 4, 171);
+            padding-bottom: 5px ;
+            margin-bottom: 2px ;
+        }
+        .button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: rgb(226, 4, 171);
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+ img{
+      padding-left: 20px;
     }
-  </style>
-  <body>
-   <div class="container">
-     <h1>Login without Password</h1>
-    <div id="sawo-container" style="height: 300px; width: 400px;"></div>
-   </div>
-    
-    <script src="https://websdk.sawolabs.com/sawo.min.js"></script>    
-<script>
-    var config = {
-        // should be same as the id of the container created on 3rd step
-        containerID: "sawo-container",
-        // can be one of 'email' or 'phone_number_sms'
-        identifierType: "email",
-        // Add the API key copied from 2nd step
-        apiKey: "12007a6d-0594-411b-bc0b-05f6c5465e7a",
-        // Add a callback here to handle the payload sent by sdk
-        onSuccess: (payload) => {
-            window.location = "./Page/page1.html";
-        },
-    };
-    var sawo = new Sawo(config);
-    sawo.showForm();
-</script>
-    <script src="script.js"></script>
-  </body>
+    </style>
+    <body>
+        
+            <ul class="nav">
+                <li><a href-"#">Connect</a></li>
+                <li class="click"><a href="./Page/signup.html">Sign In</a></li>
+              <li><a href-"#">Home</a></li>
+            </ul>
+            <p class="title">Find Your Recipie.</p>
+            <p class="subtitle"> Got some ingredients? Recipie is Ready!</p>
+            <marquee behavior="scroll" direction="right" scrollamount="12" loop="infinite">
+            <img src="https://i.ytimg.com/vi/XGFzne__Fw8/maxresdefault.jpg" alt="Food" style="width:250px;height:200px;">
+            <img src="https://th.bing.com/th/id/OIP.r2CiYzqZh6cMXzcUIzFsqwHaD5?w=338&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7" alt="Food" style="width:250px;height:200px;">
+            <img src="https://th.bing.com/th/id/OIP.cNmPFJNOKBwLesf6MikfDQHaE6?pid=ImgDet&rs=1" alt="Food" style="width:250px;height:200px;">
+            <img src="https://th.bing.com/th/id/R.d9d6bbf14e48ab79db7bf3f7210d492b?rik=GdZEMpw4N2sNpg&riu=http%3a%2f%2fpreview.turbosquid.com%2fPreview%2f2015%2f05%2f05__12_58_43%2fbeef_011.jpg32284c6a-697f-43e2-af26-1813fb565755Original.jpg&ehk=4JI4%2bh1WFH9RjF5p9MBCZM5slE0kbiZdK5LR0EvUlBA%3d&risl=&pid=ImgRaw&r=0" alt="Food" style="width:250px;height:200px;">
+            <img src="https://th.bing.com/th/id/OIP.7PxOgaoNuPNbzs3CZN8_iwHaJ4?pid=ImgDet&rs=1" alt="Food" style="width:250px;height:200px;">
+            <img src="https://th.bing.com/th/id/OIP.AXGRaiFMDckrhcOEQ1bHRAHaE9?pid=ImgDet&rs=1" alt="Food" style="width:250px;height:200px;">
+            </marquee>
+        <p class="subtitle1"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, officiis et quae quidem veniam eligendi delectus iusto dolorum repellendus saepe assumenda molestias fuga recusandae nemo eaque, error praesentium, ad harum.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque labore, officia quae quam accusantium vitae consectetur aut pariatur magnam tempora dolores nulla deserunt modi corporis expedita eligendi, voluptas, earum quia?  SAMPLE TEXT Here we do the same as above but instead, we do a weighted mean and scale each vector using its inverse document frequency (IDF). The IDF measures the importance of a term across the whole corpus. IDF will weigh down terms that are very common across a corpus (in our case words like olive oil, garlic, butter, etc.) and weighs up rare terms. This is useful for us as it will give us better distinguishing power between recipes as the ingredients that are scaled-down will be ingredients that the user will tend to not give as an input to the recommendation system.</p>
+
+            <div class="form">
+                <p class="head2">CLICK BELOW TO START YOUR SEARCH.</p>
+             <button><a href="./Page/page2.html">Search Now</a></button>
+  </div>
+</div>
+            </div>
+           
 </html>
